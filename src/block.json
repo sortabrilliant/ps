@@ -1,0 +1,23 @@
+{
+	"name": "sortabrilliant/postscript",
+	"category": "widgets",
+	"attributes": {
+		"text": {
+			"type": "string",
+			"source": "html",
+			"selector": ".wp-block-post-script__button"
+		},
+		"backgroundColor": {
+			"type": "string"
+		},
+		"textColor": {
+			"type": "string"
+		},
+		"customBackgroundColor": {
+			"type": "string"
+		},
+		"customTextColor": {
+			"type": "string"
+		}
+	}
+}
