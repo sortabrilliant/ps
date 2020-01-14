@@ -11,7 +11,6 @@ import {
 	PanelColorSettings,
 } from '@wordpress/block-editor';
 
-const ALLOWED_BLOCKS = [ 'core/image', 'core/paragraph' ];
 const MIN_BORDER_RADIUS_VALUE = 0;
 const MAX_BORDER_RADIUS_VALUE = 50;
 const INITIAL_BORDER_RADIUS_POSITION = 5;
@@ -91,7 +90,6 @@ function PostScriptEdit( props ) {
 			<div className="wp-block-post-script">
 				<div className="wp-block-post-script__content">
 					<InnerBlocks
-						allowedBlocks={ ALLOWED_BLOCKS }
 						renderAppender={ () => (
 							<InnerBlocks.ButtonBlockAppender />
 						) }
