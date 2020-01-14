@@ -15,6 +15,7 @@ const save = ( { attributes } ) => {
 		customTextColor,
 		text,
 		textColor,
+		borderRadius,
 	} = attributes;
 
 	const textClass = getColorClassName( 'color', textColor );
@@ -30,6 +31,7 @@ const save = ( { attributes } ) => {
 	const buttonStyle = {
 		backgroundColor: backgroundClass ? undefined : customBackgroundColor,
 		color: textClass ? undefined : customTextColor,
+		borderRadius: borderRadius ? borderRadius + 'px' : undefined,
 	};
 
 	return (

@@ -16,6 +16,9 @@
 		},
 		"customTextColor": {
 			"type": "string"
+		},
+		"borderRadius": {
+			"type": "number"
 		}
 	}
 }
