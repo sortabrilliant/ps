@@ -1,4 +1,4 @@
-=== Postscript ===
+=== Post-script ===
 Contributors: sortabrilliant, mamaduka
 Tags: popover, popup
 Donate link: https://sortabrilliant.com/ps/
