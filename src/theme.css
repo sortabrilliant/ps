@@ -13,6 +13,14 @@
 	opacity: 0.7;
 }
 
+.wp-block-post-script__button:not(.has-background) {
+	background-color: #007cba;
+}
+
+.wp-block-post-script__button:not(.has-text-color) {
+	color: white;
+}
+
 .wp-block-post-script__content {
 	display: none;
 }
