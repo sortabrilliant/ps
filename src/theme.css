@@ -7,6 +7,7 @@
 	right: 20px;
 	bottom: 20px;
 	z-index: 999;
+	outline: 0;
 }
 
 .wp-block-post-script__button:hover {
