@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Post-script
  * Plugin URI:  https://sortabrilliant.com/ps/
- * Description: Add important information to the bottom of every page with P.S.
+ * Description: Add important information to the bottom of your site with P.S.
  * Author:      sorta brilliant
  * Author URI:  https://sortabrilliant.com/
  * Version:     1.0.0
