@@ -20,6 +20,9 @@ registerBlockType( name, {
 	keywords: [ 'pop up', 'popover', 'PS', 'postscript', 'popper' ],
 	category,
 	attributes,
+	supports: {
+		multiple: false
+	},
 	edit,
 	save,
 } );
