@@ -15,7 +15,7 @@ const { name, category, attributes } = metadata;
 
 registerBlockType( name, {
 	title: 'P.S.',
-	description: 'Add important information to the bottom of every page.',
+	description: 'Add important information to the bottom of your site.',
 	icon,
 	keywords: [ 'pop up', 'popover', 'PS', 'postscript', 'popper' ],
 	category,
