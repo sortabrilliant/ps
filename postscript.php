@@ -1,8 +1,8 @@
 <?php
 /**
  * Plugin Name: P.S.
- * Plugin URI:  https://sortabrilliant.com/
- * Description: Experimental
+ * Plugin URI:  https://sortabrilliant.com/ps/
+ * Description: Add important information to the bottom of every page with P.S.
  * Author:      sorta brilliant
  * Author URI:  https://sortabrilliant.com/
  * Version:     1.0.0
