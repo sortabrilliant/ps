@@ -54,16 +54,8 @@ function register_block() {
 		$script_data['version']
 	);
 
-	wp_register_style(
-		'postscript-styles',
-		plugins_url( 'src/style.css', __FILE__ ),
-		[],
-		'1.0.0'
-	);
-
 	register_block_type( 'sortabrilliant/postscript', [
 		'editor_script' => 'postscript',
-		'style'         => 'postscript-styles',
 	] );
 }
 add_action( 'init', __NAMESPACE__ . '\\register_block' );
