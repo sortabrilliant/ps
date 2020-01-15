@@ -7,11 +7,14 @@
 	right: 20px;
 	bottom: 20px;
 	z-index: 999;
-	outline: 0;
 }
 
 .wp-block-post-script__button:hover {
 	opacity: 0.7;
+}
+
+.wp-block-post-script__button:focus {
+	outline: 0;
 }
 
 .wp-block-post-script__button:not(.has-background) {

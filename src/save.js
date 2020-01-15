@@ -22,6 +22,7 @@ const save = ( { attributes } ) => {
 	const backgroundClass = getColorClassName( 'background-color', backgroundColor );
 
 	const buttonClasses = classnames( 'wp-block-post-script__button', {
+		'wp-block-button__link': true,
 		'has-text-color': textColor || customTextColor,
 		[ textClass ]: textClass,
 		'has-background': backgroundColor || customBackgroundColor,
