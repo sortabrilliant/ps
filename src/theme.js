@@ -1,6 +1,6 @@
 jQuery( document ).ready( function( $ ) {
-	$button   = $( '.wp-block-post-script__button' );
-	$btnLabel = $button.text();
+	var $button   = $( '.wp-block-post-script__button' );
+	var $btnLabel = $button.text();
 	
 	$button.click( function() {
 		$( this ).parent().toggleClass( 'is-active' );
