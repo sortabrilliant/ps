@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: Postscript
+ * Plugin Name: Post-script
  * Plugin URI:  https://sortabrilliant.com/ps/
  * Description: Add important information to the bottom of every page with P.S.
  * Author:      sorta brilliant
