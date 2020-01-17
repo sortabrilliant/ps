@@ -1,4 +1,4 @@
-=== P.S ===
+=== P.S. ===
 Contributors: sortabrilliant, mamaduka
 Tags: popover, popup
 Donate link: https://sortabrilliant.com/ps/
@@ -16,6 +16,10 @@ Add important information to the bottom of your site with P.S.
 P.S. is the easiest way to add important information to the bottom of your site. P.S. a container block where whatever blocks you put inside of it will be displayed on your site as a popover. The only thing you are limited by is your imagination, all blocks are supported.
 
 == Screenshots ==
+1. Add whatever blocks you want in the P.S. block.
+2. Set up your button.
+3. On your site P.S. generates a button.
+3. And your popover automatically.
 
 == Changelog ==
 1.0.0 initial commit
