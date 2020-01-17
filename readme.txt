@@ -13,6 +13,8 @@ Add important information to the bottom of your site with P.S.
 
 == Description ==
 
+P.S. is the easiest way to add important information to the bottom of the page. P.S. a container block where whatever blocks you put inside of it will be displayed on your site as a popover. The only thing you are limited by is your imagination, all blocks are supported.
+
 == Screenshots ==
 
 == Changelog ==
