@@ -3,7 +3,7 @@
 }
 
 .wp-block-post-script__button {
-	position: fixed;
+	position: fixed!important;
 	right: 20px;
 	bottom: 20px;
 	z-index: 999;
