@@ -21,6 +21,13 @@
 		}
 	}
 
+	function toggleWindowVisibility( content, button, close = true ) {
+		content.setAttribute( 'aria-hidden', String( close ) );
+		button.setAttribute( 'aria-expanded', String( ! close ) );
+		button.innerHTML = close ? buttonLabel : '&times;';
+		setTabIndexOnFocusableElements( focusableElements, close ? -1 : 0 );
+	}
+
 	if ( button ) {
 		var buttonLabel = button.innerHTML;
 		var parent = button.parentElement;
@@ -35,10 +42,21 @@
 		button.addEventListener( 'click', function() {
 			var isOpen = content.getAttribute( 'aria-hidden' ) === 'false';
 
-			content.setAttribute( 'aria-hidden', String( isOpen ) );
-			button.setAttribute( 'aria-expanded', String( ! isOpen ) );
-			button.innerHTML = isOpen ? buttonLabel : '&times;';
-			setTabIndexOnFocusableElements( focusableElements, isOpen ? -1 : 0 );
+			toggleWindowVisibility( content, button, isOpen );
+		} );
+
+		window.addEventListener( 'click', function( event ) {
+			if ( event.target === button || content.contains( event.target ) ) {
+				return;
+			}
+
+			toggleWindowVisibility( content, button, true );
+		} );
+
+		window.addEventListener( 'keydown', function( event ) {
+			if ( event.key === 'Escape' ) {
+				toggleWindowVisibility( content, button, true );
+			}
 		} );
 	}
 } )();
