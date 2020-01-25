@@ -12,7 +12,7 @@
 }
 
 .wp-block[data-type="sortabrilliant/postscript"] .wp-block-post-script {
-	padding: 10px 20px;
+	padding-top: 10px;
 }
 
 .wp-block[data-type="sortabrilliant/postscript"] .wp-block-post-script:before {
@@ -20,10 +20,22 @@
 	display: block;
 	width: 100%;
 	position: absolute;
-	right: 15px;
-	top: 15px;
+	right: 0;
+	top: 10px;
 	text-align: right;
 	font-family: 'Menlo', 'Courier New', Courier, monospace;
 	color: grey;
 	font-size: 14px;
+}
+
+/**
+ * Fix block mover on full width items
+ */
+.wp-block[data-type="sortabrilliant/postscript"] .block-editor-block-list__layout .block-editor-block-list__block[data-align="wide"] > .block-editor-block-list__block-edit > .block-editor-block-mover,
+.wp-block[data-type="sortabrilliant/postscript"] .block-editor-block-list__layout .block-editor-block-list__block[data-align="full"] > .block-editor-block-list__block-edit > .block-editor-block-mover {
+	left: -37px;
+	top: -15px;
+	margin-top: -8px;
+	padding-right: 2px;
+	width: 30px;
 }

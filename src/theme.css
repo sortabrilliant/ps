@@ -59,3 +59,15 @@
 .wp-block-post-script__content[aria-hidden="false"] > * {
 	opacity: 1;
 }
+
+.wp-block-post-script__content .alignwide {
+	width: calc(100% + 1em);
+	max-width: calc(100% + 1em);
+	margin-left: -0.5em;
+}
+
+.wp-block-post-script__content .alignfull {
+	width: calc(100% + 2em);
+	max-width: calc(100% + 2em);
+	margin-left: -1em;
+}
