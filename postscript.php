@@ -73,7 +73,7 @@ function frontend_block_asssets() {
 	wp_enqueue_script(
 		'postscript-front-script',
 		plugins_url( 'src/theme.js', __FILE__ ),
-		[ 'jquery' ],
+		[],
 		'1.0.0',
 		true
 	);
