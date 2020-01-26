@@ -73,7 +73,7 @@ function frontend_block_asssets() {
 	wp_enqueue_script(
 		'postscript-front-script',
 		plugins_url( 'src/theme.js', __FILE__ ),
-		[ 'jquery' ],
+		[],
 		'1.0.0',
 		true
 	);
@@ -86,3 +86,18 @@ function frontend_block_asssets() {
 	);
 }
 add_action( 'enqueue_block_assets', __NAMESPACE__ . '\\frontend_block_asssets' );
+
+/**
+ * Enqueue editor assets.
+ *
+ * @return void
+ */
+function editor_block_asssets() {
+	wp_enqueue_style(
+		'postscript-editor-style',
+		plugins_url( 'src/editor.css', __FILE__ ),
+		[],
+		'1.0.0'
+	);
+}
+add_action( 'enqueue_block_editor_assets', __NAMESPACE__ . '\\editor_block_asssets' );
