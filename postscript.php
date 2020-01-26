@@ -14,25 +14,7 @@
 
 namespace SortaBrilliant\PostScript;
 
-/**
- * Get the script data.
- *
- * @param string $path     File path.
- * @param string $dir      Directory.
- * @return array $data
- */
-function get_script_data( $path, $dir ) {
-	$pathinfo  = pathinfo( trailingslashit( $dir ) . $path );
-	$file_path = "{$pathinfo['dirname']}/{$pathinfo['filename']}.asset.php";
-
-	if ( ! file_exists( $file_path ) ) {
-		return [ 'dependencies' => [], 'version' => false ];
-	}
-
-	$data = require $file_path;
-
-	return $data;
-}
+const VERSION = '1.0.0';
 
 /**
  * Registers the block and required assets.
@@ -44,18 +26,29 @@ function register_block() {
 		return;
 	}
 
-	$script_path = 'build/index.js';
-	$script_data = get_script_data( $script_path, __DIR__ );
+	$asset_filepath = __DIR__ . '/build/index.asset.php';
+	$asset_file     = file_exists( $asset_filepath ) ? include $asset_filepath : [
+		'dependencies' => [],
+		'version'      => VERSION,
+	];
 
 	wp_register_script(
 		'postscript',
-		plugins_url( $script_path, __FILE__ ),
-		$script_data['dependencies'],
-		$script_data['version']
+		plugins_url( 'build/index.js', __FILE__ ),
+		$asset_file['dependencies'],
+		$asset_file['version']
+	);
+
+	wp_register_style(
+		'postscript-editor-style',
+		plugins_url( 'build/editor.css', __FILE__ ),
+		[],
+		$asset_file['version']
 	);
 
 	register_block_type( 'sortabrilliant/postscript', [
 		'editor_script' => 'postscript',
+		'editor_style'  => 'postscript-editor-style'
 	] );
 }
 add_action( 'init', __NAMESPACE__ . '\\register_block' );
@@ -72,32 +65,17 @@ function frontend_block_asssets() {
 
 	wp_enqueue_script(
 		'postscript-front-script',
-		plugins_url( 'src/theme.js', __FILE__ ),
+		plugins_url( 'build/theme.js', __FILE__ ),
 		[],
-		'1.0.0',
+		VERSION,
 		true
 	);
 
 	wp_enqueue_style(
 		'postscript-front-style',
-		plugins_url( 'src/theme.css', __FILE__ ),
+		plugins_url( 'build/theme.css', __FILE__ ),
 		[],
-		'1.0.0'
+		VERSION
 	);
 }
 add_action( 'enqueue_block_assets', __NAMESPACE__ . '\\frontend_block_asssets' );
-
-/**
- * Enqueue editor assets.
- *
- * @return void
- */
-function editor_block_asssets() {
-	wp_enqueue_style(
-		'postscript-editor-style',
-		plugins_url( 'src/editor.css', __FILE__ ),
-		[],
-		'1.0.0'
-	);
-}
-add_action( 'enqueue_block_editor_assets', __NAMESPACE__ . '\\editor_block_asssets' );
