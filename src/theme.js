@@ -1,3 +1,5 @@
+import './theme.css';
+
 ( function () {
 	var FOCUSABLE_ELEMENTS = [
 		'a[href]:not([tabindex^="-"]):not([inert])',
