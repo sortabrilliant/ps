@@ -12,7 +12,7 @@
 }
 
 .wp-block[data-type="sortabrilliant/postscript"] .wp-block-post-script {
-	padding-top: 10px;
+	padding: 30px 0 5px;
 }
 
 .wp-block[data-type="sortabrilliant/postscript"] .wp-block-post-script:before {
