@@ -5,7 +5,7 @@
  * Description: Add important information to the bottom of your site with P.S.
  * Author:      sorta brilliant
  * Author URI:  https://sortabrilliant.com/
- * Version:     1.0.0
+ * Version:     1.1.0
  * License:     GPL-2.0-or-later
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
  *
@@ -14,7 +14,7 @@
 
 namespace SortaBrilliant\PostScript;
 
-const VERSION = '1.0.0';
+const VERSION = '1.1.0';
 
 /**
  * Registers the block and required assets.

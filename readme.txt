@@ -22,4 +22,11 @@ P.S. is the easiest way to add important information to the bottom of your site.
 3. And your popover automatically.
 
 == Changelog ==
-1.0.0 initial commit
+
+= 1.1.0 =
+* Updates block styles.
+* Removes jQuery dependency.
+* Improves accessibility.
+
+= 1.0.0 =
+* initial commit
