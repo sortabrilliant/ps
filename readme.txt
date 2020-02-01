@@ -1,7 +1,6 @@
 === P.S. ===
 Contributors: sortabrilliant, mamaduka
 Tags: popover, popup
-Donate link: https://sortabrilliant.com/ps/
 Requires at least: 5.0
 Tested up to: 5.3.2
 Requires PHP: 5.6
