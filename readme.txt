@@ -13,6 +13,9 @@ Add important information to the bottom of your site with P.S.
 == Description ==
 P.S. is the easiest way to add important information to the bottom of your site. P.S. is a container block where whatever blocks you put inside of it will be displayed on your site as a popover. The only thing you are limited by is your imagination, all blocks are supported.
 
+#### I like this, who made it?
+This plugin is brought to you by [sorta brilliant](https://sortabrilliant.com/) and [block garden](https://block.garden).
+
 == Screenshots ==
 1. Add whatever blocks you want in the P.S. block.
 2. Set up your button.
@@ -26,4 +29,4 @@ P.S. is the easiest way to add important information to the bottom of your site.
 * Improves accessibility.
 
 #### 1.0.0
-* initial commit
+* Initial commit
