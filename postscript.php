@@ -46,36 +46,41 @@ function register_block() {
 		$asset_file['version']
 	);
 
+	wp_register_script(
+		'postscript-front-script',
+		plugins_url( 'build/theme.js', __FILE__ ),
+		[],
+		$asset_file['version'],
+		true
+	);
+
+	wp_register_style(
+		'postscript-front-style',
+		plugins_url( 'build/theme.css', __FILE__ ),
+		[],
+		$asset_file['version']
+	);
+
 	register_block_type( 'sortabrilliant/postscript', [
 		'editor_script' => 'postscript',
-		'editor_style'  => 'postscript-editor-style'
+		'editor_style'  => 'postscript-editor-style',
+		'render_callback' => __NAMESPACE__ . '\\block_load_assets',
 	] );
 }
 add_action( 'init', __NAMESPACE__ . '\\register_block' );
 
 /**
- * Enqueue front-end assets.
+ * Conditionally load block assets.
  *
- * @return void
+ * @param array $attr
+ * @param array $content
+ * @return string $content
  */
-function frontend_block_asssets() {
-	if ( is_admin() ) {
-		return;
+function block_load_assets( $attr, $content ) {
+	if ( ! is_admin() ) {
+		wp_enqueue_script( 'postscript-front-script' );
+		wp_enqueue_style( 'postscript-front-style' );
 	}
 
-	wp_enqueue_script(
-		'postscript-front-script',
-		plugins_url( 'build/theme.js', __FILE__ ),
-		[],
-		VERSION,
-		true
-	);
-
-	wp_enqueue_style(
-		'postscript-front-style',
-		plugins_url( 'build/theme.css', __FILE__ ),
-		[],
-		VERSION
-	);
+	return $content;
 }
-add_action( 'enqueue_block_assets', __NAMESPACE__ . '\\frontend_block_asssets' );
