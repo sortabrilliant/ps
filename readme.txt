@@ -2,9 +2,9 @@
 Contributors: sortabrilliant, mamaduka
 Tags: popover, popup, block
 Requires at least: 5.0
-Tested up to: 5.3.2
+Tested up to: 5.4
 Requires PHP: 5.6
-Stable tag: 1.1.0
+Stable tag: 1.2.0
 License: GPL-2.0-or-later
 License URI: http://www.gnu.org/licenses/gpl-2.0.txt
 
@@ -23,6 +23,9 @@ This plugin is brought to you by [sorta brilliant](https://sortabrilliant.com/) 
 3. And your popover automatically.
 
 == Changelog ==
+#### 1.2.0
+* Conditionally load block assets.
+
 #### 1.1.0
 * Updates block styles.
 * Removes jQuery dependency.
