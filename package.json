@@ -1,6 +1,6 @@
 {
 	"name": "sorta-brilliant-postscript",
-	"version": "1.2.0",
+	"version": "1.2.1",
 	"description": "P.S.",
 	"author": "sorta brilliant",
 	"license": "GPL-2.0-or-later",
@@ -22,11 +22,11 @@
 		"test:unit": "wp-scripts test-unit-js"
 	},
 	"devDependencies": {
-		"@wordpress/scripts": "^6.2.0",
+		"@wordpress/scripts": "^9.0.0",
 		"classnames": "^2.2.6",
 		"css-loader": "^3.4.2",
+		"ignore-emit-webpack-plugin": "^2.0.2",
 		"mini-css-extract-plugin": "^0.9.0",
-		"optimize-css-assets-webpack-plugin": "^5.0.3",
-		"webpack-fix-style-only-entries": "^0.4.0"
+		"optimize-css-assets-webpack-plugin": "^5.0.3"
 	}
 }
