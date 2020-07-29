@@ -1,20 +1,22 @@
 <?php
 /**
- * Plugin Name: P.S.
- * Plugin URI:  https://sortabrilliant.com/ps/
- * Description: Add important information to the bottom of your site with P.S.
- * Author:      sorta brilliant
- * Author URI:  https://sortabrilliant.com/
- * Version:     1.2.0
- * License:     GPL-2.0-or-later
- * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
+ * Plugin Name:       P.S.
+ * Plugin URI:        https://sortabrilliant.com/ps/
+ * Description:       Add important information to the bottom of your site with P.S.
+ * Version:           1.2.1
+ * Requires at least: 5.0
+ * Requires PHP:      5.6
+ * Author:            sorta brilliant
+ * Author URI:        https://sortabrilliant.com/
+ * License:           GPL-2.0-or-later
+ * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  *
  * @package PostScript
  */
 
 namespace SortaBrilliant\PostScript;
 
-const VERSION = '1.2.0';
+const VERSION = '1.2.1';
 
 /**
  * Registers the block and required assets.
